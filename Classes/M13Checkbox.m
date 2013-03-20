@@ -344,7 +344,6 @@
     checkView.selected = YES;
     [checkView setNeedsDisplay];
     
-    [self sendActionsForControlEvents:UIControlEventValueChanged];
     return YES;
 }
 
@@ -358,6 +357,7 @@
 {
     checkView.selected = NO;
     [self toggleState];
+    [self sendActionsForControlEvents:UIControlEventValueChanged];
     [super endTrackingWithTouch:touch withEvent:event];
 }
 
